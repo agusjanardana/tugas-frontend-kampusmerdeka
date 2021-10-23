@@ -1,0 +1,58 @@
+@import url(https://fonts.googleapis.com/css?family=Slabo+27px);
+
+.red-block p {
+    display: inline-block;
+    justify-content: center;
+    font-size: 100px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-family: 'Slabo 27px', serif;
+}
+
+.red-block {
+    width: 8%;
+    padding: 40px;
+    background-color: red;
+    border-radius: 15px;
+    margin: 100px;
+}
+
+.blue-block {
+    width: 8%;
+    padding: 40px;
+    background-color: blue;
+    border-radius: 15px;
+    margin: 100px;
+}
+
+.blue-block p {
+    display: inline-block;
+    justify-content: center;
+    font-size: 100px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-family: 'Slabo 27px', serif;
+}
+.first-element {
+    display: flex;
+}
+
+.second-element {
+    margin: 100px;
+    background-color: green;
+    width: 21%;
+    border-radius: 15px;
+    height: 1500px;
+}
+
+.second-element p {
+    margin-top: 0;
+    color: white;
+    font-size: 100px;
+    font-family: 'Slabo 27px', serif;
+    display: inline-block;
+}
