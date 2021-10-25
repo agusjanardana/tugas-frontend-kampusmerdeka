@@ -1,0 +1,67 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="styles2.css" />
+        <title>Contact Us</title>
+    </head>
+    <body>
+        <div class="content">
+            <div class="left-image">
+                <div id="image-one"></div>
+                <img class="background-second" src="./img/logo-ALTA-v2.png" />
+            </div>
+            <div class="form-controller row">
+                <form>
+                    <h1>Contact Us</h1>
+                    <div class="form-group">
+                        <label>Full Name<span>*</span></label>
+                        <input type="email" class="form-control" placeholder="Your Full Name Here...." />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address<span>*</span></label>
+                        <input
+                            type="email"
+                            class="form-control"
+                            id="exampleInputEmail1"
+                            aria-describedby="emailHelp"
+                            placeholder="Enter email"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Phone Number<span>*</span></label>
+                        <input type="number" class="form-control" id="examplePhoneNUmber" placeholder="08573890xxxxx" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Nationality">Nationality</label>
+                        <select class="form-control required">
+                            <option value="Nationality" placeholder="Nationality">Selected</option>
+                            <option value="Nationality" placeholder="Nationality">Indonesia</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Text Area</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                    </div>
+
+                    <a id="myButton" type="submit" class="btn">Submit</a>
+                </form>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    </body>
+</html>
+
+<script>
+    document.getElementById('myButton').onclick = function () {
+        window.location.href = 'home.html';
+    };
+</script>
