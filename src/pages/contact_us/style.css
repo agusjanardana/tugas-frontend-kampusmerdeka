@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap');
+
+.left-image .background-first {
+    width: 39%;
+    height: 100%;
+    position: fixed;
+    float: left;
+
+    display: inline-block;
+}
+
+.left-image .background-second {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    left: 10%;
+    width: 20%;
+    top: 37%;
+    display: block;
+    float: left;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+}
+.form-controller {
+    font-size: 20px;
+    color: #19345e;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    left: 20%;
+    top: 6rem;
+    height: 0;
+}
+
+.form-control {
+    width: 35rem;
+}
+#image-one {
+    background-image: linear-gradient(
+            to bottom,
+            rgb(8, 18, 65) 1%,
+            rgba(9, 44, 90, 0.6) 86%,
+            rgba(9, 11, 133, 0.8) 120%
+        ),
+        url('/src/assets/charles-rRWiVQzLm7k-unsplash.jpg');
+
+    color: white;
+    width: 40vw;
+    height: 100vh;
+    background-size: 100% 100%;
+}
+
+.btn {
+    font-family: 'Roboto', sans-serif;
+    width: 100px;
+    height: 40px;
+    left: 490px;
+    top: 433px;
+    color: white !important;
+    background: #f47522;
+    border-radius: 20px;
+}
+a:hover {
+    color: black !important;
+}
+
+span {
+    font-family: 'Roboto', sans-serif;
+    color: red;
+    font-size: 25px;
+}
+
+@media (max-width: 768px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+    #image-one {
+        width: 100vw;
+        height: 80vw;
+    }
+    .left-image .background-second {
+        width: 50vw;
+        justify-content: center;
+        align-items: center;
+        left: 28%;
+        top: 12rem;
+    }
+
+    .form-control {
+        width: 30rem;
+    }
+}
+
+@media (max-width: 375px) {
+    body {
+        overflow-x: hidden;
+    }
+    .left-image .background-second {
+        width: 25vw;
+        display: inline;
+        left: 35%;
+        top: 2rem;
+    }
+    .form-control {
+        width: 15rem;
+    }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+    -moz-appearance: textfield;
+}
