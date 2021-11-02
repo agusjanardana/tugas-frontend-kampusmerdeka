@@ -1,0 +1,12 @@
+.text-crossed {
+    text-decoration: line-through;
+}
+
+.json-text {
+    font-size: 25px;
+    padding: 15px;
+}
+
+.card {
+    margin-top: 15px;
+}
