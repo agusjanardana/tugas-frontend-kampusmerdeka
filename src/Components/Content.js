@@ -2,7 +2,7 @@ import Form from './Form';
 import TodoList from './TodoList';
 
 const Content = (props) => {
-    const { inputTodo, todosData, handleDelete, handleChange, submitEvent, handleCompleted } = props;
+    const { todoEditing, setTodoEditing,editingText, setEditingText, submitEdits, inputTodo, todosData, handleDelete, handleChange, submitEvent, handleCompleted } = props;
 
     return (
         <section className="vh-100" style={{ backgroundColor: '#eee' }}>
@@ -17,6 +17,11 @@ const Content = (props) => {
                                     todosData={todosData}
                                     handleDelete={handleDelete}
                                     handleCompleted={handleCompleted}
+                                    submitEdits={submitEdits}
+                                    todoEditing={todoEditing}
+                                    setTodoEditing={setTodoEditing}
+                                    editingText={editingText}
+                                    setEditingText={setEditingText}
                                 ></TodoList>
                             </div>
                         </div>

@@ -1,0 +1,10 @@
+.about-card{
+    position: absolute;
+    left: 40%;
+    bottom: 50%;
+    width: 40%;
+}
+
+.sidebar-container{
+    height : 100vh;
+}

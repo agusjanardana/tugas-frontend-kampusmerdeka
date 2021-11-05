@@ -1,5 +1,5 @@
 const TodoList = (props) => {
-    const { todosData, handleDelete, handleCompleted } = props;
+    const {submitEdits, todoEditing,setTodoEditing,editingText,setEditingText, todosData, handleDelete, handleCompleted } = props;
     
     console.log("test data", todosData);
     return (
@@ -16,12 +16,24 @@ const TodoList = (props) => {
                 {todosData?.map((value, index) => (
                     <tr key={index}>
                         <th scope="row">{value.id}</th>
-                        <td>{value.title}</td>
+                        <td> {value.id === todoEditing ? (
+                            <input
+                                type="text"
+                                onChange={(e) => setEditingText(e.target.value)}
+                            />
+                        ) : (
+                        <p>{value.title}</p>
+                        )}</td>
                         <td>{value.completed === 'true' ? 'Completed' : 'In Progress'}</td>
-                        <td>
+                        <td className="todo-actions">
+                           {value.id === todoEditing ? (
+                            <button type="submit" className="btn btn btn-warning" onClick={() => submitEdits(value.id)}>Submit  Edits</button>
+                            ) : (
+                            <button type="submit" className="btn btn btn-warning" onClick={() => setTodoEditing(value.id)}>Edit</button>
+                            )}
                             <button
-                                type="submit"
-                                className="btn btn-danger"
+                                type="submit "
+                                className="btn btn-danger ms-1"
                                 onClick={() => handleDelete(value.id)}
                             >
                                 Delete

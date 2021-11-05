@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Content from './Content';
+import Navbar from './Navbar';
 
 const Home = () => {
     const [todosData, setTodo] = useState(
@@ -18,6 +19,8 @@ const Home = () => {
     );
 
     const [inputTodo, setInputTodo] = useState('');
+    const [todoEditing, setTodoEditing] = useState(null);
+    const [editingText, setEditingText] = useState("");
 
     const handleDelete = (id) => {
         var temporaryItem = todosData.filter((data, index, arr) => arr[index].id !== id );
@@ -62,20 +65,38 @@ const Home = () => {
                 break;
             }
         }
-        setTodo([...data]  )
+        setTodo([...data])
         return;
     };
+
+    const submitEdits = (id) => {
+        const updatedTodos = [...todosData].map((todo) => {
+            if (todo.id === id) {
+                todo.title = editingText;
+            }
+            return todo;
+        });
+        setTodo(updatedTodos);
+        setTodoEditing(null);
+    }
     return (
-        <div>
+      <>
+            <Navbar></Navbar>
             <Content
-                todosData={todosData}
-                inputTodo = {inputTodo}
-                handleDelete={handleDelete}
-                handleChange={handleChange}
-                submitEvent={submitEvent}
-                handleCompleted={handleCompleted}
+                    todosData={todosData}
+                    inputTodo = {inputTodo}
+                    handleDelete={handleDelete}
+                    handleChange={handleChange}
+                    submitEvent={submitEvent}
+                    handleCompleted={handleCompleted}
+                    submitEdits={submitEdits}
+                    todoEditing={todoEditing}
+                    setTodoEditing={setTodoEditing}
+                    editingText={editingText}
+                    setEditingText={setEditingText}
             ></Content>
-        </div>
+        </>
+       
     )
 }
 
