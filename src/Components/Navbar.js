@@ -1,6 +1,21 @@
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+
+    const listNavBar = [
+        {
+            label: 'Home',
+            path: 'home'
+        },
+        {
+            label: 'About',
+            path : 'about'
+        },
+        {
+            label: 'Form',
+            path : 'form'
+        }
+    ]
     return (
 
         <nav className="navbar navbar-light bg-light" aria-label="First navbar example">
@@ -22,20 +37,16 @@ const Navbar = () => {
 
                 <div className="collapse navbar-collapse" id="navbarsExample01">
                     <ul className="navbar-nav me-auto mb-2">
-                        <li classNameName="nav-item">
-                            <Link to="home" className="nav-link active" aria-current="page" >
-                                Home
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="about" className="nav-link">
-                                About
-                            </Link>
-                        </li>
-                        
-                        
+                        {listNavBar.map((data, index) => {
+                            return (
+                                <li key={index}className="nav-item">
+                                <Link to={data.path} className="nav-link active" aria-current="page" >
+                                    {data.label}
+                                </Link>
+                            </li>
+                            )
+                        })}
                     </ul>
-                    
                 </div>
             </div>
         </nav>

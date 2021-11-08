@@ -5,7 +5,7 @@ import Home from './Components/Home';
 import NotFound from './Components/NotFound';
 import AboutApp from './Components/About/AboutApp';
 import AboutAuthor from './Components/About/AboutAuthor';
-
+import Form from './Components/Form/Content'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 function App() {
@@ -18,6 +18,7 @@ function App() {
         <Route path="/about" element={< AboutApp />}></Route>
         <Route path="/about/about-app" element={< AboutApp />}></Route>
         <Route path="/about/about-author" element={< AboutAuthor />}></Route>
+        <Route path="/form" element={<Form/>}></Route>
       </Routes>
     </BrowserRouter>
   );
