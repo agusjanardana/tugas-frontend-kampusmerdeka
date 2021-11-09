@@ -14,6 +14,7 @@ const Form = () => {
 
     useEffect(() => {
         console.log('Ada Perubahan');
+        console.log(values);
     }, [values]);
 
     const handleChange = (e) => {
@@ -27,14 +28,12 @@ const Form = () => {
 
     const handleSubmit = () => {
         alert('Submited');
-        setValues.nama('a');
     };
 
     const handleReset = () => {
         setValues({
             nama: '',
             email: '',
-            number: '',
             phoneNumber: '',
             pendidikan: '',
             program: '',
@@ -44,9 +43,9 @@ const Form = () => {
     };
 
     const baseError = {
-        nama : "Nama Tidak Boleh Kosong",
-        email: "Email Harus Benar",
-        number: "Nomor Tidak Valid"
+        nama : "",
+        email: "r",
+        number: ""
     }
     const [error, setError] = useState(baseError);
     const [viewError, setViewError] = useState([{
@@ -115,10 +114,9 @@ const Form = () => {
                                 name="pendidikan"
                                 class="form-check-input"
                                 type="radio"
-                                name="gridRadios"
                                 id="gridRadioIT"
                                 onChange={handleChange}
-                                value={values.pendidikan}
+                                value="IT"
                             />
                             <label class="form-check-label" for="gridRadioIT">
                                 IT
@@ -129,10 +127,9 @@ const Form = () => {
                                 name="pendidikan"
                                 class="form-check-input"
                                 type="radio"
-                                name="gridRadios"
                                 id="gridRadioNonIT"
                                 onChange={handleChange}
-                                value={values.pendidikan}
+                                value="NON IT"
                             />
                             <label class="form-check-label" for="gridRadios">
                                 Non IT

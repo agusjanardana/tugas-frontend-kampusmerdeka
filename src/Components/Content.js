@@ -2,7 +2,7 @@ import Form from './Form';
 import TodoList from './TodoList';
 
 const Content = (props) => {
-    const { todoEditing, setTodoEditing,editingText, setEditingText, submitEdits, inputTodo, todosData, handleDelete, handleChange, submitEvent, handleCompleted } = props;
+    const { inputTodo, handleChange, submitEvent } = props;
 
     return (
         <section className="vh-100" style={{ backgroundColor: '#eee' }}>
@@ -14,14 +14,6 @@ const Content = (props) => {
                                 <h4 className="text-center my-3 pb-3">To Do App</h4>
                                 <Form inputTodo={inputTodo} submitEvent={submitEvent} handleChange={handleChange}></Form>
                                 <TodoList
-                                    todosData={todosData}
-                                    handleDelete={handleDelete}
-                                    handleCompleted={handleCompleted}
-                                    submitEdits={submitEdits}
-                                    todoEditing={todoEditing}
-                                    setTodoEditing={setTodoEditing}
-                                    editingText={editingText}
-                                    setEditingText={setEditingText}
                                 ></TodoList>
                             </div>
                         </div>
