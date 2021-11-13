@@ -2,7 +2,7 @@ import Content from './components/content';
 import Footer from './components/review-footer';
 import { motion } from 'framer-motion';
 
-const reviewPages = () => {
+const ReviewMessage = () => {
     return (
         <>
             <Content></Content>
@@ -11,4 +11,4 @@ const reviewPages = () => {
     );
 };
 
-export default reviewPages;
+export default ReviewMessage;
