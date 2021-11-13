@@ -9,14 +9,19 @@ const NewsList = (props) => {
                 {NewsListing.map((value, index) => {
                     return (
                         <div className="col" key={index}>
-                            <div class="card" style={{ width: '18rem' }}>
-                                <img src={value.urlToImage} class="card-img-top" alt={value.title} />
-                                <div class="card-body">
-                                    <h5 class="card-title">{value.title}</h5>
-                                    <p class="card-text">{value.description}</p>
+                            <div className="card" style={{ width: '18rem' }}>
+                                {value.image == null ? (
+                                    <strong style={{ textAlign: 'center' }}>NO IMAGES</strong>
+                                ) : (
+                                    <img src={value.image} className="card-img-top" alt={value.title} />
+                                )}
+
+                                <div className="card-body">
+                                    <h5 className="card-title">{value.title}</h5>
+                                    <p className="card-text">{value.description}</p>
                                 </div>
-                                <div class="card-body">
-                                    <a href={value.url} class="card-link">
+                                <div className="card-body">
+                                    <a href={value.url} className="card-link">
                                         News URL
                                     </a>
                                 </div>

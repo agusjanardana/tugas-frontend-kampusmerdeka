@@ -14,9 +14,10 @@ const NewsItem = () => {
     const submitNews = async (e) => {
         e.preventDefault();
         const res = await Axios.get(
-            `https://newsapi.org/v2/everything?q=${newsInput}&from=2021-11-13&sortBy=popularity&apiKey=7b592451176149189e71cba2a676ba80`
+            `http://api.mediastack.com/v1/news?access_key=fba6927179c2be28f6545bc72f031237&keywords=${newsInput}`
         );
-        setNews(res.data.articles);
+        // console.log(res.data.data);
+        setNews(res.data.data);
         setNewsInput('');
     };
     return (
