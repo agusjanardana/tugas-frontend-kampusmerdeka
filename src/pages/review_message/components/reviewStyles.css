@@ -1,0 +1,25 @@
+.line {
+    width: 300px;
+    border: 1px solid #ccd7eb;
+}
+
+.thanks > a.btn {
+    width: 104px;
+    height: 40px;
+    left: 490px;
+    top: 433px;
+    color: white;
+    background: #f47522;
+    border-radius: 20px;
+    margin-top: 1rem;
+}
+
+.card-container {
+    top: 20%;
+    position: relative !important;
+}
+
+.dot-images {
+    top: 108%;
+    right: 90%;
+}

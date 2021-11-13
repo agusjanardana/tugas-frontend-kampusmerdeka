@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap');
 
 .left-image .background-first {
-    width: 39%;
+    width: 40%;
     height: 100%;
     position: fixed;
-    float: left;
 
     display: inline-block;
 }
@@ -13,31 +12,32 @@
     position: absolute;
     justify-content: center;
     align-items: center;
-    left: 10%;
+    left: 5%;
     width: 20%;
     top: 37%;
     display: block;
     float: left;
 }
-
+#myButton {
+    margin-top: 2rem;
+}
 .content {
     display: flex;
-    flex-direction: row;
+    right: 5%;
 }
 .form-controller {
     font-size: 20px;
     color: #19345e;
     font-family: 'Roboto', sans-serif;
     position: relative;
-    left: 20%;
-    top: 6rem;
-    height: 0;
+    left: 10%;
+    margin-top: 5rem;
 }
 
 .form-control {
     width: 35rem;
 }
-#image-one {
+div#image-one {
     background-image: linear-gradient(
             to bottom,
             rgb(8, 18, 65) 1%,
@@ -50,10 +50,11 @@
     width: 40vw;
     height: 100vh;
     background-size: 100% 100%;
+    position: relative;
+    right: 26%;
 }
 
-.btn {
-    font-family: 'Roboto', sans-serif;
+.btn.btn-contact {
     width: 100px;
     height: 40px;
     left: 490px;
