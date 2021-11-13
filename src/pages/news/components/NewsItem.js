@@ -14,7 +14,7 @@ const NewsItem = () => {
     const submitNews = async (e) => {
         e.preventDefault();
         const res = await Axios.get(
-            `http://api.mediastack.com/v1/news?access_key=fba6927179c2be28f6545bc72f031237&keywords=${newsInput}`
+            `https://api.mediastack.com/v1/news?access_key=fba6927179c2be28f6545bc72f031237&keywords=${newsInput}`
         );
         // console.log(res.data.data);
         setNews(res.data.data);
