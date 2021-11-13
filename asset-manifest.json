@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/tugas-frontend-kampusmerdeka/static/css/main.9a9b9107.chunk.css",
+    "main.js": "/tugas-frontend-kampusmerdeka/static/js/main.cdf23ebd.chunk.js",
+    "main.js.map": "/tugas-frontend-kampusmerdeka/static/js/main.cdf23ebd.chunk.js.map",
+    "runtime-main.js": "/tugas-frontend-kampusmerdeka/static/js/runtime-main.3f06beeb.js",
+    "runtime-main.js.map": "/tugas-frontend-kampusmerdeka/static/js/runtime-main.3f06beeb.js.map",
+    "static/js/2.84d6e2d4.chunk.js": "/tugas-frontend-kampusmerdeka/static/js/2.84d6e2d4.chunk.js",
+    "static/js/2.84d6e2d4.chunk.js.map": "/tugas-frontend-kampusmerdeka/static/js/2.84d6e2d4.chunk.js.map",
+    "static/js/3.1a9b0c09.chunk.js": "/tugas-frontend-kampusmerdeka/static/js/3.1a9b0c09.chunk.js",
+    "static/js/3.1a9b0c09.chunk.js.map": "/tugas-frontend-kampusmerdeka/static/js/3.1a9b0c09.chunk.js.map",
+    "index.html": "/tugas-frontend-kampusmerdeka/index.html",
+    "static/css/main.9a9b9107.chunk.css.map": "/tugas-frontend-kampusmerdeka/static/css/main.9a9b9107.chunk.css.map",
+    "static/js/2.84d6e2d4.chunk.js.LICENSE.txt": "/tugas-frontend-kampusmerdeka/static/js/2.84d6e2d4.chunk.js.LICENSE.txt",
+    "static/media/bg-img.88b23adf.png": "/tugas-frontend-kampusmerdeka/static/media/bg-img.88b23adf.png",
+    "static/media/style.css": "/tugas-frontend-kampusmerdeka/static/media/charles-rRWiVQzLm7k-unsplash.0b577bce.jpg",
+    "static/media/logo.6ce24c58.svg": "/tugas-frontend-kampusmerdeka/static/media/logo.6ce24c58.svg",
+    "static/media/matthew-hamilton-tNCH0sKSZbA-unsplash.52885822.jpg": "/tugas-frontend-kampusmerdeka/static/media/matthew-hamilton-tNCH0sKSZbA-unsplash.52885822.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3f06beeb.js",
+    "static/js/2.84d6e2d4.chunk.js",
+    "static/css/main.9a9b9107.chunk.css",
+    "static/js/main.cdf23ebd.chunk.js"
+  ]
+}
