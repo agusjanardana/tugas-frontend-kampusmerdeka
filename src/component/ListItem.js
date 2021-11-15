@@ -1,16 +1,24 @@
-import "./Home.css"
-const ListItem = (props) => {
+import './Home.css';
 
-    const { id, nama, umur, jenisKelamin } = props.data
+const ListItem = (props) => {
+    const { id, nama, umur, jenisKelamin, loading } = props.data;
 
     return (
         <tr>
-            <td>{nama}</td>
-            <td>{umur}</td>
-            <td>{jenisKelamin}</td>
-            <td className="removeBorder" onClick={() => props.hapusPengunjung(id)}><button>Hapus</button></td>
+            {loading ? (
+                <p>Loading....</p>
+            ) : (
+                <>
+                    <td>{nama}</td>
+                    <td>{umur}</td>
+                    <td>{jenisKelamin}</td>
+                    <td className="removeBorder" onClick={() => props.hapusPengunjung(id)}>
+                        <button>Hapus</button>
+                    </td>
+                </>
+            )}
         </tr>
-    )
-}
+    );
+};
 
 export default ListItem;
