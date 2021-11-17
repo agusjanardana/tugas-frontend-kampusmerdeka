@@ -2,7 +2,7 @@ import './Home.css';
 
 const ListItem = (props) => {
     const { id, nama, umur, jenisKelamin } = props.data;
-    console.log(props.loading);
+
     return (
         <tr>
             {props.loading ? (

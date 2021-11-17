@@ -1,5 +1,5 @@
 import ListItem from './ListItem';
-import { gql, useQuery, useLazyQuery, useMutation } from '@apollo/client';
+import { gql, useQuery, useLazyQuery, useMutation, useSubscription } from '@apollo/client';
 import { useState } from 'react';
 
 const ListPassenger = (props) => {
@@ -19,6 +19,16 @@ const ListPassenger = (props) => {
         }
     `;
 
+    const getSubscription = gql`
+        subscription MySubscription {
+            kampus_merdeka_anggota {
+                nama
+                umur
+                jenisKelamin
+                id
+            }
+        }
+    `;
     // const getDataListQuery = gql`
     //     query MyQuery($id: Int!) {
     //         kampus_merdeka_anggota(where: { id: { _eq: $id } }) {
@@ -51,7 +61,7 @@ const ListPassenger = (props) => {
         }
     `;
     //query get data
-    const { data, loading, error, refetch } = useQuery(getDataList);
+    // const { data, loading, error, refetch } = useQuery(getDataList);
     // query update data
     const [editData, { data: dataMutation, loading: loadingMutation, error: errorMutation }] = useMutation(
         editDataList,
@@ -59,6 +69,7 @@ const ListPassenger = (props) => {
     );
 
     const [deleteData, { loading: dataDeleteLoading }] = useMutation(deleteDataList, { refetchQueries: [getDataList] });
+    const { data, loading, error } = useSubscription(getSubscription);
 
     const onClickData = () => {
         // setUserData(data?.kampus_merdeka_anggota);
@@ -86,7 +97,6 @@ const ListPassenger = (props) => {
     const submitEdit = (id) => {
         editData({ variables: { id: id, nama: editingText } });
         setEdit(null);
-        refetch();
     };
 
     return (
